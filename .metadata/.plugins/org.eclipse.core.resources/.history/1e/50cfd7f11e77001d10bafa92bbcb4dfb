@@ -1,0 +1,12 @@
+package com.exam.Exception;
+
+public class UserFoundException extends Exception {
+
+	public UserFoundException() {
+		super("User with this user name is alerdy there !!!!!");
+	}
+	public UserFoundException(String message) {
+		super(message);
+	}
+	
+}

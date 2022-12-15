@@ -1,0 +1,12 @@
+package com.exam.Servises;
+
+import com.exam.Models.Exam.Quiz;
+
+public interface QuizService {
+
+	public Quiz addQuize(Quiz quiz);
+	
+	public Quiz updateQuiz(Quiz quiz);
+	
+	public void quiz
+}

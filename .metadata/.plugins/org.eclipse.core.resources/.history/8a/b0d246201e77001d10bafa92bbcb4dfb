@@ -1,0 +1,9 @@
+package com.exam.Exception;
+
+public class UserFoundException extends Exception {
+
+	public UserFoundException() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

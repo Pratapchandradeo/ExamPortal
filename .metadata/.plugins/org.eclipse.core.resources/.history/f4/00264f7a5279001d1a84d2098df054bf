@@ -1,0 +1,17 @@
+package com.exam.Servises;
+
+import java.util.Set;
+
+import com.exam.Models.Exam.Questions;
+
+public interface QuestionService {
+
+	public Questions addQuestion(Questions questions);
+	
+	public Questions updateQuestions(Questions questions);
+	
+	public Set<Questions> getQuestions();
+	
+	public 
+	
+}

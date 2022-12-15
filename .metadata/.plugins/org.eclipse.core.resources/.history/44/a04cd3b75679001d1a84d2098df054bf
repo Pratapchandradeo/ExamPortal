@@ -1,0 +1,14 @@
+package com.exam.Exception;
+
+public class CategoryIdNotFoundException extends Exception {
+
+	public CategoryIdNotFoundException() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public CategoryIdNotFoundException() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

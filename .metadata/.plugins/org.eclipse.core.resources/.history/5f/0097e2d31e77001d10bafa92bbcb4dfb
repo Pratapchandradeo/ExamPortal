@@ -1,0 +1,14 @@
+package com.exam.Exception;
+
+public class UserNotFoundException extends Exception {
+
+	public UserNotFoundException() {
+		supp
+	}
+	
+	
+	public UserNotFoundException(String message) {
+		super(message);
+	}
+	
+}

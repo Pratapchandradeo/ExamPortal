@@ -1,0 +1,5 @@
+package com.exam.Models.Exam;
+
+public class Quiz {
+
+}

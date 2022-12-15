@@ -1,0 +1,13 @@
+package com.exam.Servises;
+
+import com.exam.Models.Exam.Questions;
+
+public interface QuestionService {
+
+	public Questions addQuestion(Questions questions);
+	
+	public Questions updateQuestions(Questions questions);
+	
+	public Set<Qu>
+	
+}

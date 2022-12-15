@@ -1,0 +1,7 @@
+package com.exam.Servises;
+
+public interface QuestionService {
+
+	public Question
+	
+}

@@ -1,0 +1,10 @@
+package com.exam.Models.Exam;
+
+import jakarta.persistence.ManyToOne;
+
+public class Questions {
+
+	
+	@ManyToOne
+	private Quiz quiz;
+}

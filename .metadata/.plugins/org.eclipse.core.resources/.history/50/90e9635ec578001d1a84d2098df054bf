@@ -1,0 +1,17 @@
+package com.exam.Models.Exam;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Questions {
+
+	private Long QueId;
+	private String content;
+	private String 
+	
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Quiz quiz;
+}

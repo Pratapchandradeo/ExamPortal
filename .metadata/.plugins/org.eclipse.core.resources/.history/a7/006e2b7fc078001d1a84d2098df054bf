@@ -1,0 +1,10 @@
+package com.exam.Models.Exam;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Category {
+	
+	private Long cid;
+
+}

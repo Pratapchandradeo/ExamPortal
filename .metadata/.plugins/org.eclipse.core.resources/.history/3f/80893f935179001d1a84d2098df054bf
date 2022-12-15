@@ -1,0 +1,7 @@
+package com.exam.ServisesImp;
+
+import com.exam.Servises.QuizService;
+
+public class QuizServiceImp implements QuizService{
+
+}
