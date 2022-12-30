@@ -1,0 +1,12 @@
+package com.exam.Repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.exam.Models.Exam.Quiz;
+
+public interface QuizRepositry extends JpaRepository<Quiz, Long> {
+
+	public List<Quiz> findBy
+}

@@ -1,7 +1,0 @@
-package com.exam.ServisesImp;
-
-import com.exam.Servises.CategoryService;
-
-public class categoryServiceImp implements CategoryService {
-
-}

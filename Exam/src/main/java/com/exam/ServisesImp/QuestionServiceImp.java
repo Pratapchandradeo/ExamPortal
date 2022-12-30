@@ -57,4 +57,10 @@ public class QuestionServiceImp implements QuestionService {
 		return this.questionRepositry.findByQuiz(quiz);
 	}
 
+	@Override
+	public Questions getData(Long qid) {
+		// TODO Auto-generated method stub
+		return this.questionRepositry.getReferenceById(qid);
+	}
+
 }

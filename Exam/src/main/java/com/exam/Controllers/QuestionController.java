@@ -2,6 +2,7 @@ package com.exam.Controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,18 +65,31 @@ public class QuestionController {
 		Quiz quiz = this.quizService.getQuiz(qid);
 		Set<Questions>  questions = quiz.getQuestions();
 		
-		List list = new ArrayList<>(questions);
+		List<Questions> list = new ArrayList<>(questions);
 		
 		if(list.size() > Integer.parseInt(quiz.getNumberOfQuestions()))
 		{
 			list = list.subList(0,Integer.parseInt(quiz.getNumberOfQuestions()+1));
 		}
+		
+		list.forEach(q->{
+			q.setAnswer("");
+		});
 		Collections.shuffle(list);
 		return ResponseEntity.ok(list);
 
 	}
 	
 	
+	@GetMapping("/quiz/all/{qid}")
+	public ResponseEntity<?> getQuestionHandlerForAdmin(@PathVariable("qid") Long qid){
+		
+		Quiz quiz = new  Quiz();
+		quiz.setqId(qid);
+		
+		Set<Questions> questions = this.questionService.getQuestionsOfQuiz(quiz);
+		return ResponseEntity.ok(questions);
+	}
 	
 	// get single Question
 	
@@ -93,6 +107,43 @@ public class QuestionController {
 	{
 		this.questionService.deleteQuestion(quId);
 	}
+	
+	
+	//Checking score and matching answer------------
+	
+	@PostMapping("/answerSubmit")
+	public ResponseEntity<?> answerMatching(@RequestBody List<Questions> questions){
+		
+		Double marksGot=0.0;
+		Integer correctAnswer=0;
+		Integer attempted=0;
+		
+		
+		
+		System.out.println(questions);
+		for(Questions q:questions){
+//			signle Question
+			
+			 Questions question = this.questionService.getData(q.getQueId());
+			 
+			 if(question.getAnswer().equals(q.getGivenAnswer())) {
+//				 correct
+				 
+				 correctAnswer++;
+				 Double marks =Double.parseDouble(questions.get(0).getQuiz().getMaxMark())/questions.size();
+						 
+				 marksGot+=marks;
+			 }
+			 if(q.getGivenAnswer()!=null) {
+				 
+				 attempted++;
+			 }
+			
+		}
+		Map<Object,Object> mark = Map.of("marksGot",marksGot,"correctAnswer",correctAnswer,"attempted",attempted);
+		return ResponseEntity.ok(mark);
+	}
+	
 	
 	
 	

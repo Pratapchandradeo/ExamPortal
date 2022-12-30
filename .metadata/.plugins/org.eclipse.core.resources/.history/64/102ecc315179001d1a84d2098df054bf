@@ -1,6 +1,0 @@
-package com.exam.Servises;
-
-public interface QuizService {
-
-	public Quiz add Qui
-}

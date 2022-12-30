@@ -1,5 +1,0 @@
-package com.exam.Repo;
-
-public interface QuestionRepositry extends J {
-
-}

@@ -1,7 +1,0 @@
-package com.exam.Repo;
-
-import org.hibernate.query.criteria.JpaCriteriaNode;
-
-public interface CategoryRepositry extends JpaCriteriaNode {
-
-}

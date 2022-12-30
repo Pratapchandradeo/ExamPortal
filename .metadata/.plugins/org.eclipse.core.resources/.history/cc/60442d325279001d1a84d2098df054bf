@@ -1,9 +1,0 @@
-package com.exam.Servises;
-
-import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
-
-public interface QuestionService {
-
-	public Question
-	
-}
